@@ -69,7 +69,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Download individual jars
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: jazzer_tmp
           path: _tmp/
@@ -116,7 +116,7 @@ jobs:
           echo "build:linux --extra_toolchains=@llvm_toolchain//:cc-toolchain-x86_64-linux" >> .bazelrc
 
       - name: Download merged jar
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: jazzer
           path: _tmp/
@@ -141,7 +141,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Download individual tar.gzs
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: jazzer_releases
           path: _releases/
